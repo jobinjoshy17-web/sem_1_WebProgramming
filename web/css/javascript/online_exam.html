@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <p>Q1. What is 2 + 3?</p>
+    <input type="radio" name="q1" id = "c1">5<br>
+    <input type="radio" name="q1">5<br>
+    <input type="radio" name="q1">5<br>
+    <input type="radio" name="q1">5<br>
+
+    
+    <p>Q2. What is 2 + 3?</p>
+    <input type="radio" name="q2" id = "c2">5<br>
+    <input type="radio" name="q2">6<br>
+    <input type="radio" name="q2">7<br>
+    <input type="radio" name="q2">8<br>
+
+    <p>Q3. What is 2 + 1?</p>
+    <input type="radio" name="q3" id = "c3">3<br>
+    <input type="radio" name="q3">5<br>
+    <input type="radio" name="q3">9<br>
+    <input type="radio" name="q3">0<br>
+
+    <p>Q4. What is 2 + 4?</p>
+    <input type="radio" name="q4" id = "c4">6<br>
+    <input type="radio" name="q4">5<br>
+    <input type="radio" name="q4">7<br>
+    <input type="radio" name="q4">8<br>
+
+    <p>Q5. What is 2 + 8?</p>
+    <input type="radio" name="q5" id = "c5">10<br>
+    <input type="radio" name="q5">5<br>
+    <input type="radio" name="q5">4<br>
+    <input type="radio" name="q5">9<br>
+
+    <p>Q6. What is 10 + 10?</p>
+    <input type="radio" name = "q6" id="c6">20
+    <input type="radio" name = "q6">21
+    <input type="radio" name = "q6">22
+    <input type="radio" name = "q6">23
+
+    <input type="submit" onclick="result()">
+
+    <script>
+        function result(){
+            let s = 0;
+            if(c1.checked) s++;
+            if(c2.checked) s++;
+            if(c3.checked) s++;
+            if(c4.checked) s++;
+            if(c5.checked) s++;
+            if(c6.checked) s++;
+
+            alert("Your score : " + s);
+        }
+    </script>
+
+</body>
+</html>

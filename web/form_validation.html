@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function validateForm(){
+            var name = document.forms["regForm"]["user_name"].value;
+            var email = document.forms["regForm"]["email"].value;
+            var pwd = document.forms["regForm"]["pwd"].value;
+            var confirm_pwd = document.forms["regForm"]["confirm_pwd"].value;
+            var phone = document.forms["regForm"]["phone"].value;
+
+            if(!name || !email || !pwd || !confirm_pwd || !phone){
+                alert("Fields cannot be empty!");
+                return false;
+            }
+
+            if(!email.includes("@") || !email.includes(".")){
+                alert("please enter a valid email.");
+                return false;
+            }
+
+            if(pwd.length < 6){
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            if(pwd != confirm_pwd){
+                alert("Passwords do not match");
+                return false;
+            }
+
+            if (phone.length != 10 || isNaN(phone)) {
+                alert("Enter a valid 10-digit phone number");
+                return false;
+            }
+
+            alert("Registration successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="regForm" onsubmit="return validateForm()">
+        <table border = "1">
+
+            <tr>
+                <td>Name : </td>
+                <td><input type="text" name = "user_name"></td>
+            </tr>
+
+            <tr>
+                <td>Email : </td>
+                <td><input type="text" name = "email"></td>
+            </tr>
+
+            <tr>
+                <td>Password : </td>
+                <td><input type="password" name = "pwd"></td>
+            </tr>
+
+            <tr>
+                <td>Confirm pwd : </td>
+                <td><input type="password" name = "confirm_pwd"></td>
+            </tr>
+
+            <tr>
+                <td>Phone : </td>
+                <td><input type="text" name = "phone"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align = "center"><input type="submit"></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

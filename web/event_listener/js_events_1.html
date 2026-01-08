@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="program_9_shepherd.jfif" alt="shepherd" id = "dog_img">
+    <p id="dog_text">Picture of german shepherd</p>
+
+    <script>
+        const image = document.getElementById("dog_img");
+        const text = document.getElementById("dog_text");
+
+        image.addEventListener("mouseover", () => {
+            image.src = "program_9_cat.jfif";
+            text.textContent = "Now it's a picture of a ragdoll.";
+        });
+
+        image.addEventListener("mouseout", () =>{
+            image.src = "program_9_shepherd.jfif";
+            text.textContent = "Back to the shepherd itself.";
+        });
+
+        image.addEventListener("click", () => {
+            image.src = "elden_ring.jpg";
+            text.textContent = "Cover of Elden ring";
+        });
+    </script>
+</body>
+</html>
